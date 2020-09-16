@@ -44,6 +44,49 @@ int checklink()
   cout << "works";
 }
 
+void readandwriteFile(int n)
+{
+  int cnt = 0;
+  int readandwritecount = 0;
+  fstream file;
+  ofstream filewrite;
+  string word;
+  string filename = "Small-Database.txt";
+  string writefilename = "Output-Database.txt";
+  file.open(filename.c_str());
+  filewrite.open(writefilename.c_str(), ios::app);
+
+  cout << endl;
+  cout << endl;
+  cout << "------ DATA BASE FILE ----" << endl;
+  cout << endl;
+  cout << endl;
+  cout << "FIRSTNAME  -  LASTNAME  - ID" << endl;
+  cout << endl;
+  filewrite << endl;
+  while (file >> word)
+  {
+
+    if (readandwritecount < n)
+    {
+      cout << word << "     ";
+      filewrite << word << " ";
+      cnt++;
+      if (cnt == 3)
+      {
+        cout << endl;
+        cnt = 0;
+        readandwritecount++;
+        filewrite << endl;
+      }
+    }
+  }
+  cout << endl;
+  cout << "ABOVE RECORDS ADDED TO OUTPUT FILE SUCCESSFULLY!";
+  file.close();
+  filewrite.close();
+}
+
 void read_employee()
 {
   Employee e;
@@ -80,11 +123,25 @@ void read_employee()
 
   cout << "Successfully written and saved.";
 }
-int read_specified()
+
+void read_specified(int total_cnt)
 {
-  cout << "Enter  number of records to be read" << endl;
+  cout << "Enter number of records to be read" << endl;
   int n;
   cin >> n;
+  if (n == 0)
+  {
+    return;
+  }
+  if (n > total_cnt || n > 99)
+  {
+    cout << "OOPS! FILE DOESN'T CONTAIN SO MANY ELEMENTS! TRY WITH LESSER VALUE" << endl;
+    return;
+  }
+  else
+  {
+    readandwriteFile(n);
+  }
 }
 
 // void read_2_equal()

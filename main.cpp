@@ -5,11 +5,13 @@
 
 using namespace std;
 
+int total_cnt = 0;
+
 void readFile()
 {
   fstream file;
   string word;
-  int cnt = 0, total_cnt = 0;
+  int cnt = 0;
   string filename = "Small-Database.txt";
   file.open(filename.c_str());
   cout << endl;
@@ -60,7 +62,7 @@ int main()
     read_employee();
     break;
   case 2:
-    // read_specified();
+    read_specified(total_cnt);
     break;
   // case 3:
   //   read_2_equal();
