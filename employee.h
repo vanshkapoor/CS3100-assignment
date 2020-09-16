@@ -14,7 +14,7 @@ private:
 public:
     Employee()
     {
-        }
+    }
     Employee(const Employee &person)
     {
         ID = person.ID;
@@ -29,7 +29,10 @@ public:
         lastname = last;
     }
 
-    // ~Employee();
+    ~Employee()
+    {
+        cout << "Object is being deleted" << endl;
+    }
 
     void setFirstname(string first);
     void setLastname(string last);

@@ -101,6 +101,11 @@ void read_employee()
   cin >> ln;
   cout << "Enter ID: " << endl;
   cin >> id;
+  while (id > 9999999)
+  {
+    cout << "ID should be less than 9999999. Enter again :";
+    cin >> id;
+  }
   e.setFirstname(fn);
   e.setLastname(ln);
   e.setID(id);
