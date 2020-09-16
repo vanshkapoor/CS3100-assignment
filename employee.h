@@ -40,9 +40,7 @@ public:
     int getID() const;
     string getFirstname() const;
     string getLastname() const;
-     friend bool operator == (const Employee& p1, const Employee &p2);
-     friend bool operator < (const Employee& p1, const Employee &p2);
-
-
+    friend bool operator==(const Employee &p1, const Employee &p2);
+    friend bool operator<(const Employee &p1, const Employee &p2);
     // friend function to be done
 };

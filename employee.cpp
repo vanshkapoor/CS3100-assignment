@@ -38,32 +38,17 @@ int Employee::getID() const
 {
   return ID;
 }
-bool  operator ==(const Employee& p1, const Employee &p2)
+bool operator==(const Employee &p1, const Employee &p2)
 {
-  if(p1.getFirstname()!=p2.getFirstname()||p1.getLastname()!=p2.getLastname()||p1.getID()!=p2.getID())
-  return false;
+  if (p1.getFirstname() != p2.getFirstname() || p1.getLastname() != p2.getLastname() || p1.getID() != p2.getID())
+    return false;
   return true;
 }
 
-bool  operator < (const Employee& p1, const Employee &p2)
+bool operator<(const Employee &p1, const Employee &p2)
 {
-  return p1.getID()<p1.getID();
+  return p1.getID() < p1.getID();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 int checklink()
 {
@@ -175,9 +160,6 @@ void read_specified(int total_cnt)
   }
 }
 
-
-
-
 void read_2_equal()
 {
   Employee e[2];
@@ -189,23 +171,21 @@ void read_2_equal()
     string fn, ln;
     cout << "Enter details of the employee " << i + 1 << ": " << endl;
     cout << "Enter firstname: " << endl;
-    cin>>fn;
+    cin >> fn;
     cout << "Enter lastname: " << endl;
-    cin>>ln;
+    cin >> ln;
     cout << "Enter ID: " << endl;
     cin >> id;
     e[i].setFirstname(fn);
     e[i].setLastname(ln);
     e[i].setID(id);
   }
-  if(e[0]==e[1])
+  if (e[0] == e[1])
 
-    cout<<"These are same employees"<<endl;
-
+    cout << "These are same employees" << endl;
 
   else
-  cout<<"These are  diffrent employees"<<endl;
-
+    cout << "These are  diffrent employees" << endl;
 }
 
 void read_2_compare()
@@ -219,9 +199,9 @@ void read_2_compare()
     string fn, ln;
     cout << "Enter details of the employee " << i + 1 << ": " << endl;
     cout << "Enter firstname: " << endl;
-    cin>>fn;
+    cin >> fn;
     cout << "Enter lastname: " << endl;
-    cin>>ln;
+    cin >> ln;
     cout << "Enter ID: " << endl;
     cin >> id;
     e[i].setFirstname(fn);
@@ -230,14 +210,13 @@ void read_2_compare()
   }
   if (e[0] < e[1])
   {
-    cout << "Employee " << e[1].getFirstname()<< " has greater employee ID";
+    cout << "Employee " << e[1].getFirstname() << " has greater employee ID";
   }
   else
   {
     cout << "Employee " << e[0].getFirstname() << " has greater employee ID";
   }
 }
-
 
 // int main()
 // {

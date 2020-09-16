@@ -44,7 +44,7 @@ int main()
   readFile();
   cout << endl;
   cout << endl;
-  a:
+a:
   cout << "------------------------------------Menu--------------------------------------------------------------------------------------------------------------------" << endl;
   cout << "(1) INSERT AN EMPLOYEE RECORD TO DATABASE" << endl;
   cout << "(2) TRANSFER N NUMBER OF RECORDS FROM INPUT FILE TO OUTPUT FILE." << endl;
@@ -64,19 +64,19 @@ int main()
   case 2:
     read_specified(total_cnt);
     break;
-    case 3:
+  case 3:
     read_2_equal();
     break;
   case 4:
     read_2_compare();
     break;
   case 5:
-    cout << "Exiting...";
+    cout << "All files closing and Exiting...";
     exit(3000);
     break;
   default:
     cout << "Wrong Choice";
   }
-goto a;
+  goto a;
   return 0;
 }
