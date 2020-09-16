@@ -12,6 +12,10 @@ private:
     string firstname;
 
 public:
+    Employee()
+    {
+      
+    }
     Employee(const Employee &person)
     {
         ID = person.ID;

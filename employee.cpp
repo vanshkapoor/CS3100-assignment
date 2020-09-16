@@ -71,6 +71,64 @@ int read_specified()
     cin >> n;
 }
 
+void read_2_equal()
+{
+  Employee e[2];
+  for(int  i=0;i<2;i++)
+
+ {
+
+   int id;
+   string fn,ln;
+   cout<<"Enter details of the employee "<<i+1<<": "<<endl;
+   cout<<"Enter firstname: "<<endl;
+   gets(fn);
+   cout<<"Enter lastname: "<<endl;
+   gets(fn);
+   cout<<"Enter ID: "<<endl;
+   cin>>id;
+   e[i].setFirstname(fn);
+   e[i].setLastname(ln);
+   e[i].setID(id);
+ }
+   cout<<"";
+ }
+
+ void read_2_compare()
+ {
+   Employee e[2];
+   for(int  i=0;i<2;i++)
+
+  {
+
+    int id;
+    string fn,ln;
+    cout<<"Enter details of the employee "<<i+1<<": "<<endl;
+    cout<<"Enter firstname: "<<endl;
+    gets(fn);
+    cout<<"Enter lastname: "<<endl;
+    gets(fn);
+    cout<<"Enter ID: "<<endl;
+    cin>>id;
+    e[i].setFirstname(fn);
+    e[i].setLastname(ln);
+    e[i].setID(id);
+  }
+    if(e[0].getID()>e[1].getID())
+    {
+      cout<<"Employee "<<e[0].getFirstname<<" has greater employee ID";
+
+    }
+    else
+    {
+      cout<<"Employee "<<e[1].getFirstname<<" has greater employee ID";
+    }
+  }
+
+
+ }
+
+
 // int main()
 // {
 //     // THIS CPP FILE WILL BE USED TO :
