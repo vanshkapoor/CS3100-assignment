@@ -76,6 +76,8 @@ a:
     break;
   default:
     cout << "Wrong Choice";
+    exit(3000);
+    break;
   }
   goto a;
   return 0;

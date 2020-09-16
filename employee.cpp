@@ -50,6 +50,12 @@ bool operator<(const Employee &p1, const Employee &p2)
   return p1.getID() < p1.getID();
 }
 
+ostream &operator<<(ostream &output, Employee &P)
+{
+  output << "Firstname : " << P.getFirstname() << " Lastname : " << P.getLastname() << " ID : " << P.getID();
+  return output;
+}
+
 int checklink()
 {
   cout << "works";
