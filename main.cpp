@@ -64,16 +64,16 @@ int main()
   case 2:
     read_specified(total_cnt);
     break;
-  // case 3:
-  //   read_2_equal();
-  //   break;
-  // case 4:
-  //   read_2_compare();
-  //   break;
-  // case 5:
-  //   cout << "Exiting...";
-  //   exit(3000ms);
-  //   break;
+    case 3:
+    read_2_equal();
+    break;
+  case 4:
+    read_2_compare();
+    break;
+  case 5:
+    cout << "Exiting...";
+    exit(3000);
+    break;
   default:
     cout << "Wrong Choice";
   }

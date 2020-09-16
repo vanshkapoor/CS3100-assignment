@@ -38,14 +38,14 @@ int Employee::getID() const
 {
   return ID;
 }
-bool  Employee::operator ==(const Employee& p1, const Employee &p2)
+bool  operator ==(const Employee& p1, const Employee &p2)
 {
   if(p1.getFirstname()!=p2.getFirstname()||p1.getLastname()!=p2.getLastname()||p1.getID()!=p2.getID())
   return false;
   return true;
 }
 
-bool  Employee::operator < (const Employee& p1, const Employee &p2)
+bool  operator < (const Employee& p1, const Employee &p2)
 {
   return p1.getID()<p1.getID();
 }
@@ -189,9 +189,9 @@ void read_2_equal()
     string fn, ln;
     cout << "Enter details of the employee " << i + 1 << ": " << endl;
     cout << "Enter firstname: " << endl;
-    gets(fn);
+    cin>>fn;
     cout << "Enter lastname: " << endl;
-    gets(fn);
+    cin>>ln;
     cout << "Enter ID: " << endl;
     cin >> id;
     e[i].setFirstname(fn);
@@ -200,11 +200,11 @@ void read_2_equal()
   }
   if(e[0]==e[1])
 
-    cout<<"These are same employees";
+    cout<<"These are same employees"<<endl;
 
 
   else
-  cout<<"These are same employee";
+  cout<<"These are same employee"<<endl;
 
 }
 
@@ -219,9 +219,9 @@ void read_2_compare()
     string fn, ln;
     cout << "Enter details of the employee " << i + 1 << ": " << endl;
     cout << "Enter firstname: " << endl;
-    gets(fn);
+    cin>>fn;
     cout << "Enter lastname: " << endl;
-    gets(fn);
+    cin>>ln;
     cout << "Enter ID: " << endl;
     cin >> id;
     e[i].setFirstname(fn);
@@ -230,11 +230,11 @@ void read_2_compare()
   }
   if (e[0] < e[1])
   {
-    cout << "Employee " << e[1].getFirstname << " has greater employee ID";
+    cout << "Employee " << e[1].getFirstname()<< " has greater employee ID";
   }
   else
   {
-    cout << "Employee " << e[0].getFirstname << " has greater employee ID";
+    cout << "Employee " << e[0].getFirstname() << " has greater employee ID";
   }
 }
 
