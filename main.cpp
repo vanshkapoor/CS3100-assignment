@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void read+rec()
+void read_rec()
 {
   Employee e;
   int id;
@@ -27,11 +27,34 @@ void read+rec()
   cout<<"ID: "<<e.getLastname();
 
 }
-read_specified()
+ void read_specified()
 {
   cout<<"Enter  number of records to be read"<<endl;
   int n;
   cin>>n;
+
+}
+void read_2_equal()
+{
+Employee e[2];
+ for(int  i=0;i<2;i++)
+
+ {
+
+   int id;
+   string fn,ln;
+   cout<<"Enter details of the employee "<<i+1<<": "<<endl;
+   cout<<"Enter firstname: "<<endl;
+   gets(fn);
+   cout<<"Enter lastname: "<<endl;
+   gets(fn);
+   cout<<"Enter ID: "<<endl;
+   cin>>id;
+   e[i].setFirstname(fn);
+   e[i].setLastname(ln);
+   e[i].setID(id);
+ }
+   cout<<""
 
 }
 
