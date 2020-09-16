@@ -204,7 +204,7 @@ void read_2_equal()
 
 
   else
-  cout<<"These are same employee"<<endl;
+  cout<<"These are  diffrent employees"<<endl;
 
 }
 
