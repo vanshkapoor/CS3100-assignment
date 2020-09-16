@@ -14,8 +14,7 @@ private:
 public:
     Employee()
     {
-      
-    }
+        }
     Employee(const Employee &person)
     {
         ID = person.ID;
@@ -30,7 +29,7 @@ public:
         lastname = last;
     }
 
-    ~Employee();
+    // ~Employee();
 
     void setFirstname(string first);
     void setLastname(string last);

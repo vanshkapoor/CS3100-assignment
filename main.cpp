@@ -1,7 +1,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include <fstream>
-// #include "employee.cpp"
+#include "employee.cpp"
 
 using namespace std;
 
@@ -9,7 +9,7 @@ void readFile()
 {
   fstream file;
   string word;
-  int cnt = 0;
+  int cnt = 0, total_cnt = 0;
   string filename = "Small-Database.txt";
   file.open(filename.c_str());
   cout << endl;
@@ -28,8 +28,12 @@ void readFile()
     {
       cout << endl;
       cnt = 0;
+      total_cnt++;
     }
   }
+  cout << endl;
+  cout << "TOTAL RECORD COUNT = " << total_cnt << endl;
+  file.close();
 }
 
 int main()
@@ -53,7 +57,7 @@ int main()
   {
   case 1:
     // checklink();
-    // read_rec();
+    read_employee();
     break;
   case 2:
     // read_specified();
