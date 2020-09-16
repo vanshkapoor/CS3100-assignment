@@ -38,6 +38,32 @@ int Employee::getID() const
 {
   return ID;
 }
+bool  Employee::operator ==(const Employee& p1, const Employee &p2)
+{
+  if(p1.getFirstname()!=p2.getFirstname()||p1.getLastname()!=p2.getLastname()||p1.getID()!=p2.getID())
+  return false;
+  return true;
+}
+
+bool  Employee::operator < (const Employee& p1, const Employee &p2)
+{
+  return p1.getID()<p1.getID();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int checklink()
 {
@@ -149,58 +175,69 @@ void read_specified(int total_cnt)
   }
 }
 
-// void read_2_equal()
-// {
-//   Employee e[2];
-//   for (int i = 0; i < 2; i++)
 
-//   {
 
-//     int id;
-//     string fn, ln;
-//     cout << "Enter details of the employee " << i + 1 << ": " << endl;
-//     cout << "Enter firstname: " << endl;
-//     gets(fn);
-//     cout << "Enter lastname: " << endl;
-//     gets(fn);
-//     cout << "Enter ID: " << endl;
-//     cin >> id;
-//     e[i].setFirstname(fn);
-//     e[i].setLastname(ln);
-//     e[i].setID(id);
-//   }
-//   cout << "";
-// }
 
-// void read_2_compare()
-// {
-//   Employee e[2];
-//   for (int i = 0; i < 2; i++)
+void read_2_equal()
+{
+  Employee e[2];
+  for (int i = 0; i < 2; i++)
 
-//   {
+  {
 
-//     int id;
-//     string fn, ln;
-//     cout << "Enter details of the employee " << i + 1 << ": " << endl;
-//     cout << "Enter firstname: " << endl;
-//     gets(fn);
-//     cout << "Enter lastname: " << endl;
-//     gets(fn);
-//     cout << "Enter ID: " << endl;
-//     cin >> id;
-//     e[i].setFirstname(fn);
-//     e[i].setLastname(ln);
-//     e[i].setID(id);
-//   }
-//   if (e[0].getID() > e[1].getID())
-//   {
-//     cout << "Employee " << e[0].getFirstname << " has greater employee ID";
-//   }
-//   else
-//   {
-//     cout << "Employee " << e[1].getFirstname << " has greater employee ID";
-//   }
-// }
+    int id;
+    string fn, ln;
+    cout << "Enter details of the employee " << i + 1 << ": " << endl;
+    cout << "Enter firstname: " << endl;
+    gets(fn);
+    cout << "Enter lastname: " << endl;
+    gets(fn);
+    cout << "Enter ID: " << endl;
+    cin >> id;
+    e[i].setFirstname(fn);
+    e[i].setLastname(ln);
+    e[i].setID(id);
+  }
+  if(e[0]==e[1])
+
+    cout<<"These are same employees";
+
+
+  else
+  cout<<"These are same employee";
+
+}
+
+void read_2_compare()
+{
+  Employee e[2];
+  for (int i = 0; i < 2; i++)
+
+  {
+
+    int id;
+    string fn, ln;
+    cout << "Enter details of the employee " << i + 1 << ": " << endl;
+    cout << "Enter firstname: " << endl;
+    gets(fn);
+    cout << "Enter lastname: " << endl;
+    gets(fn);
+    cout << "Enter ID: " << endl;
+    cin >> id;
+    e[i].setFirstname(fn);
+    e[i].setLastname(ln);
+    e[i].setID(id);
+  }
+  if (e[0] < e[1])
+  {
+    cout << "Employee " << e[1].getFirstname << " has greater employee ID";
+  }
+  else
+  {
+    cout << "Employee " << e[0].getFirstname << " has greater employee ID";
+  }
+}
+
 
 // int main()
 // {

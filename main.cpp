@@ -44,7 +44,7 @@ int main()
   readFile();
   cout << endl;
   cout << endl;
-
+  a:
   cout << "------------------------------------Menu--------------------------------------------------------------------------------------------------------------------" << endl;
   cout << "(1) INSERT AN EMPLOYEE RECORD TO DATABASE" << endl;
   cout << "(2) TRANSFER N NUMBER OF RECORDS FROM INPUT FILE TO OUTPUT FILE." << endl;
@@ -77,6 +77,6 @@ int main()
   default:
     cout << "Wrong Choice";
   }
-
+goto a;
   return 0;
 }
