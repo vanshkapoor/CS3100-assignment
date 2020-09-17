@@ -1,7 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include <fstream>
-#include "employee.cpp"
+
+#include "functions.cpp"
 
 using namespace std;
 
